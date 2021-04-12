@@ -1,16 +1,77 @@
+
+
+<!DOCTYPE html>
 <html>
-    <head>
+
+  <head>
+    <!-- Link css and javascript file here -->
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
+ </head>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+   <body onload="hideDetails()">
+  
+    <Div  class="myDiv">
 
-        <button onclick="compute()">Compute</button>
+      <!-- open div header-some sort of input contents here  -->
+      <h1>Simple Interest Calculator</h1> <br>
+      
+       
+
+        Amount <input type="number" id="principalId" name="principal"> <br><br>
+       
+       
+      <!-- form for user input  range tag  -->
+      <form name="myform" oninput="range1value.value = rate.valueAsNumber">
+        Interest Rate <input name="rate" id="rateId" type="range" step="0.25" min="1" max="20">
+        <output name="range1value" for="rate">10.25</output><span style="color: black;">%</span>
+      </form> <br>
+      <!-- End form tag here  -->
+      <!-- select is used to create a dropdown here  -->
+        No. of years <select name="years" id="yearsId">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select> <br><br>
+      <!-- End select tag -->
+      <!-- a function perform after a button click  -->
+      
+         <!-- form validation for textbox -->
+       <form onsubmit="return validate();" method="get" action="http://google.com"><br/>
+      <button id="next" onclick="compute(this.principal, this.rate, this.years);">Compute Interest</button>
+      </form>
+
+      
+      <span id="result"></span>
+      
+         <!-- Printing output using div tag -->
+    <div id="divContainer">
+         
+			<p id="p01"> If you deposit <span style="background-color:yellow" id="principalOutput" ></span></p>
+     <p id="p02"> at an interest rate of  <span style="background-color:yellow" id="interestOutput" ></span></p>
+      <p id="p03"> You will receive an amount of <span style="background-color:yellow" id="totalamountOutput" ></span></p>
+      <p id="p04"> in the year <span style="background-color:yellow" id="yearOutput" ></span></p>  <br><br>
+			
+		</div>
+    
+      <!-- footer tag start here -->
+      <footer>
+        <p>&#169 Everyone can get rich</p>
+      </footer>
+      <!-- footer tag end here  -->
+      
+   </Div>
+   <!-- End div header -->
+      
+      
+      
     </body>
+
 </html>
