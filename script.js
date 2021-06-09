@@ -1,3 +1,14 @@
+function checkprincipal()
+{var principcal = document.getElementById("principal");
+ //check if principal value is 0 or negative
+ if(principle.value <= "0"){
+     alert("Enter a positive amount");
+     principal.focus();
+     return false;
+//if it is a positive #
+     return true;   
+ 
+ 
 function compute()
 {
     var principal = document.getElementById("principal").value;
