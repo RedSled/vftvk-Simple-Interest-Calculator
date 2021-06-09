@@ -5,8 +5,10 @@ function checkprincipal()
      alert("Enter a positive amount");
      principal.focus();
      return false;
+ }
 //if it is a positive #
      return true;   
+}
  
  
 function compute()
