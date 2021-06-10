@@ -1,16 +1,3 @@
-function checkprincipal()
-{var principcal = document.getElementById("principal");
- //check if principal value is 0 or negative
- if(principle.value <= "0"){
-     alert("Enter a positive amount");
-     principal.focus();
-     return false;
- }
-//if it is a positive #
-     return true;   
-}
- 
- 
 function compute()
 {
     var principal = document.getElementById("principal").value;
@@ -27,3 +14,13 @@ function updateRate()
     var rateval = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText=rateval;
 }  
+
+function checkamount(){
+ var principcal = document.getElementById("principal").value;
+ var positive = parseInt(principal) > 0;
+ //check if principal value is 0 or negative
+ if(!positive){
+     alert("Enter a positive number");
+    document.getElementById("principal").focus();
+ }
+}
