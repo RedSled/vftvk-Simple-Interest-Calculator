@@ -22,5 +22,6 @@ function checkamount(){
  if(!positive){
      alert("Enter a positive number");
     document.getElementById("principal").focus();
+     return false;
  }
 }
